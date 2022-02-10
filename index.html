@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/app.css">
   <script type="module" src="./dist/bundle.js"></script>
 </head>
 
 <body>
+  <div class="shadow"></div>
+  <main>
+    <img class="hero-img" src="./img/envelo.jpg" alt="Envelo logo">
+    <div>
+      <p>Możesz mieć swoją przesyłkę w kilkanaście sekund.</p>
+      <p>Rozpocznij klikając w przycisk.</p>
+    </div>
+    <div class="inputs">
+      <div class="inputs__number">
+        <label for="number">Numer telefonu:</label>
+        <input type="text" name="number" required>
+      </div>
+      <div class="inputs__code">
+        <label for="code">Kod odbioru:</label>
+        <input type="text" name="code" required>
+      </div>
+    </div>
+    <button type="submit" class="collect-btn btn">Odbierz paczkę</button>
+  </main>
+  <div class="modal__outer">
+    <div class="modal__inner">
+      <h2>Paczka odebrana!</h2>
+      <p></p>
+      <button class="end-btn btn">To wszystko na dziś</button>
+      <button class="repeat-btn btn">Odbierz kolejną paczkę</button>
+    </div>
+  </div>
+  <div class="loader"></div>
 </body>
 
 </html>

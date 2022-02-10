@@ -1,0 +1,107 @@
+@import './loader.css';
+
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: #EDF5E1;
+  display: flex;
+  justify-content: center;
+}
+
+.shadow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.788);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.shadow--active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+main {
+  max-width: 25em;
+}
+
+.hero-img {
+  width: 50%;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background-color: #e1382b;
+  padding: .7em 1.2em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.inputs {
+  display: none;
+}
+
+.inputs__number,
+.inputs__code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputs__number input,
+.inputs__code input{
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5em 1em;
+}
+
+.inputs__number > *,
+.inputs__code > *{
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.inputs--active {
+  display: block;
+}
+
+.modal__outer {
+  display: flex;
+  background: hsla(60, 1%, 23%, 0.781);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.modal__outer--open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  max-height: 50%;
+  padding: 2rem;
+  border-radius: 5px;
+  background: white;
+}
+
